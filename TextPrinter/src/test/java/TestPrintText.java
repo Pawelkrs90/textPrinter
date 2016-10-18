@@ -1,4 +1,6 @@
 
+import java.util.ArrayList;
+import java.util.List;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
@@ -21,66 +23,62 @@ public class TestPrintText extends TestCase{
 	}
 	
 	public void testPrint2Columns(){
-		
-            String text = "tttttttttfs dfsdfsdfjah sjfdsvslfklds fkldsnfjnsd lfsdtttttttttt ttvfsdgfdsfsdfdsfs dfsdfgsdtttttt"
-                + "tttttttttfs dfsdfsdfjah sjfdsvslfklds fkldsnfjnsd lfsdtttttttttt ttvfsdgfdsfsdfdsfs dfsdfgsdtttttt"
-                + "tttttttttfs dfsdfsdfjah sjfdsvslfklds fkldsnfjnsd lfsdtttttttttt ttvfsdgfdsfsdfdsfs dfsdfgsdtttttt"
-                + "tttttttttfs dfsdfsdfjah sjfdsvslfklds fkldsnfjnsd lfsdtttttttttt ttvfsdgfdsfsdfdsfs dfsdfgsdtttttt"
-                + "tttttttttfs dfsdfsdfjah sjfdsvslfklds fkldsnfjnsd lfsdtttttttttt ttvfsdgfdsfsdfdsfs dfsdfgsdtttttt"
-                + "tttttttttfs dfsdfsdfjah sjfdsvslfklds fkldsnfjnsd lfsdtttttttttt ttvfsdgfdsfsdfdsfs dfsdfgsdtttttt"
-                + "tttttttttfs dfsdfsdfjah sjfdsvslfklds fkldsnfjnsd lfsdtttttttttt ttvfsdgfdsfsdfdsfs dfsdfgsdtttttt"
-                + "tttttttttfs dfsdfsdfjah sjfdsvslfklds fkldsnfjnsd lfsdtttttttttt ttvfsdgfdsfsdfdsfs dfsdfgsdtttttt"
-                + "tttttttttfs dfsdfsdfjah sjfdsvslfklds fkldsnfjnsd lfsdtttttttttt ttvfsdgfdsfsdfdsfs dfsdfgsdtttttt"
-                + "tttttttttfs dfsdfsdfjah sjfdsvslfklds fkldsnfjnsd lfsdtttttttttt ttvfsdgfdsfsdfdsfs dfsdfgsdtttttt"
-                + "tttttttttfs dfsdfsdfjah sjfdsvslfklds fkldsnfjnsd lfsdtttttttttt ttvfsdgfdsfsdfdsfs dfsdfgsdtttttt"
-                + "tttttttttfs dfsdfsdfjah sjfdsvslfklds fkldsnfjnsd lfsdtttttttttt ttvfsdgfdsfsdfdsfs dfsdfgsdtttttt"
-                + "tttttttttfsdfsdfsdfjahsjfdsvslfkldsfkldsnfjnsdlfsdttttttttttttvfsdgfdsfsdfdsfsdfsdfgsdtttttt"
-                + "tttttttttfs dfsdfsdfjah sjfdsvslfklds fkldsnfjnsd lfsdtttttttttt ttvfsdgfdsfsdfdsfs dfsdfgsdtttttt"
-                + "tttttttttfsdfsdfsdfjahsjfdsvslfkldsfkldsnfjnsdlfsdttttttttttttvfsdgfdsfsdfdsfsdfsdfgsdtttttt"
-                + "tttttttttfsdfsdfsdfjahsjfdsvslfkldsfkldsnfjnsdlfsdttttttttttttvfsdgfdsfsdfdsfsdfsdfgsdtttttt"
-                + "tttttttttfs dfsdfsdfjah sjfdsvslfklds fkldsnfjnsd lfsdtttttttttt ttvfsdgfdsfsdfdsfs dfsdfgsdtttttt"
-                + "tttttttttfsdfsdfsdfjahsjfdsvslfkldsfkldsnfjnsdlfsdttttttttttttvfsdgfdsfsdfdsfsdfsdfgsdtttttt"
-                + "tttttttttfsdfsdfsdfjahsjfdsvslfkldsfkldsnfjnsdlfsdttttttttttttvfsdgfdsfsdfdsfsdfsdfgsdtttttt"
-                + "tttttttttfs dfsdfsdfjah sjfdsvslfklds fkldsnfjnsd lfsdtttttttttt ttvfsdgfdsfsdfdsfs dfsdfgsdtttttt"
-                + "tttttttttfs dfsdfsdfjah sjfdsvslfklds fkldsnfjnsd lfsdtttttttttt ttvfsdgfdsfsdfdsfs dfsdfgsdtttttt"
-                + "tttttttttfsdfsdfsdfjahsjfdsvslfkldsfkldsnfjnsdlfsdttttttttttttvfsdgfdsfsdfdsfsdfsdfgsdtttttt"
-                + "tttttttttfsdfsdfsdfjahsjfdsvslfkldsfkldsnfjnsdlfsdttttttttttttvfsdgfdsfsdfdsfsdfsdfgsdtttttt"
-                + "tttttttttfs dfsdfsdfjah sjfdsvslfklds fkldsnfjnsd lfsdtttttttttt ttvfsdgfdsfsdfdsfs dfsdfgsdtttttt"
-                + "tttttttttfs dfsdfsdfjah sjfdsvslfklds fkldsnfjnsd lfsdtttttttttt ttvfsdgfdsfsdfdsfs dfsdfgsdtttttt"
-                + "tttttttttfsdfsdfsdfjahsjfdsvslfkldsfkldsnfjnsdlfsdttttttttttttvfsdgfdsfsdfdsfsdfsdfgsdtttttt"
-                + "tttttttttfs dfsdfsdfjah sjfdsvslfklds fkldsnfjnsd lfsdtttttttttt ttvfsdgfdsfsdfdsfs dfsdfgsdtttttt"
-                + "tttttttttfs dfsdfsdfjah sjfdsvslfklds fkldsnfjnsd lfsdtttttttttt ttvfsdgfdsfsdfdsfs dfsdfgsdtttttt"
-                + "tttttttttfs dfsdfsdfjah sjfdsvslfklds fkldsnfjnsd lfsdtttttttttt ttvfsdgfdsfsdfdsfs dfsdfgsdtttttt"
-                + "tttttttttfsdfsdfsdfjahsjfdsvslfkldsfkldsnfjnsdlfsdttttttttttttvfsdgfdsfsdfdsfsdfsdfgsdtttttt"
-                + "tttttttttfs dfsdfsdfjah sjfdsvslfklds fkldsnfjnsd lfsdtttttttttt ttvfsdgfdsfsdfdsfs dfsdfgsdtttttt"
-                + "tttttttttfs dfsdfsdfjah sjfdsvslfklds fkldsnfjnsd lfsdtttttttttt ttvfsdgfdsfsdfdsfs dfsdfgsdtttttt"
-                + "tttttttttfsdfsdfsdfjahsjfdsvslfkldsfkldsnfjnsdlfsdttttttttttttvfsdgfdsfsdfdsfsdfsdfgsdtttttt"
-                + "tttttttttfs dfsdfsdfjah sjfdsvslfklds fkldsnfjnsd lfsdtttttttttt ttvfsdgfdsfsdfdsfs dfsdfgsdtttttt"
-                + "tttttttttfs dfsdfsdfjah sjfdsvslfklds fkldsnfjnsd lfsdtttttttttt ttvfsdgfdsfsdfdsfs dfsdfgsdtttttt"
-                + "tttttttttfsdfsdfsdfjahsjfdsvslfkldsfkldsnfjnsdlfsdttttttttttttvfsdgfdsfsdfdsfsdfsdfgsdtttttt"
-                + "tttttttttfs dfsdfsdfjah sjfdsvslfklds fkldsnfjnsd lfsdtttttttttt ttvfsdgfdsfsdfdsfs dfsdfgsdtttttt"
-                + "tttttttttfs dfsdfsdfjah sjfdsvslfklds fkldsnfjnsd lfsdtttttttttt ttvfsdgfdsfsdfdsfs dfsdfgsdtttttt"
-                + "tttttttttfsdfsdfsdfjahsjfdsvslfkldsfkldsnfjnsdlfsdttttttttttttvfsdgfdsfsdfdsfsdfsdfgsdtttttt"
-                + "tttttttttfs dfsdfsdfjah sjfdsvslfklds fkldsnfjnsd lfsdtttttttttt ttvfsdgfdsfsdfdsfs dfsdfgsdtttttt"
-                + "tttttttttfs dfsdfsdfjah sjfdsvslfklds fkldsnfjnsd lfsdtttttttttt ttvfsdgfdsfsdfdsfs dfsdfgsdtttttt"
-                + "tttttttttfsdfsdfsdfjahsjfdsvslfkldsfkldsnfjnsdlfsdttttttttttttvfsdgfdsfsdfdsfsdfsdfgsdtttttt"
-                + "tttttttttfs dfsdfsdfjah sjfdsvslfklds fkldsnfjnsd lfsdtttttttttt ttvfsdgfdsfsdfdsfs dfsdfgsdtttttt"
-                + "tttttttttfs dfsdfsdfjah sjfdsvslfklds fkldsnfjnsd lfsdtttttttttt ttvfsdgfdsfsdfdsfs dfsdfgsdtttttt";
-        
+		 
+            String text = "Zawód pilota dał mi okazję do licznych spotkań z wieloma poważnymi ludźmi. Wiele czasu spędziłem z dorosłymi."
+                    + "Zawód pilota dał mi okazję do licznych spotkań z wieloma poważnymi ludźmi. Wiele czasu spędziłem z dorosłymi."
+                    + "Zawód pilota dał mi okazję do licznych spotkań z wieloma poważnymi ludźmi. Wiele czasu spędziłem z dorosłymi."
+                    + "Zawód pilota dał mi okazję do licznych spotkań z wieloma poważnymi ludźmi. Wiele czasu spędziłem z dorosłymi."
+                    + "Zawód pilota dał mi okazję do licznych spotkań z wieloma poważnymi ludźmi. Wiele czasu spędziłem z dorosłymi."
+                    + "Zawód pilota dał mi okazję do licznych spotkań z wieloma poważnymi ludźmi. Wiele czasu spędziłem z dorosłymi."
+                    + "Zawód pilota dał mi okazję do licznych spotkań z wieloma poważnymi ludźmi. Wiele czasu spędziłem z dorosłymi."
+                    + "Zawód pilota dał mi okazję do licznych spotkań z wieloma poważnymi ludźmi. Wiele czasu spędziłem z dorosłymi."
+                    + "Zawód pilota dał mi okazję do licznych spotkań z wieloma poważnymi ludźmi. Wiele czasu spędziłem z dorosłymi."
+                    + "Zawód pilota dał mi okazję do licznych spotkań z wieloma poważnymi ludźmi. Wiele czasu spędziłem z dorosłymi."
+                    + "Zawód pilota dał mi okazję do licznych spotkań z wieloma poważnymi ludźmi. Wiele czasu spędziłem z dorosłymi."
+                    + "Zawód pilota dał mi okazję do licznych spotkań z wieloma poważnymi ludźmi. Wiele czasu spędziłem z dorosłymi."
+                    + "Zawód pilota dał mi okazję do licznych spotkań z wieloma poważnymi ludźmi. Wiele czasu spędziłem z dorosłymi."
+                    + "Zawód pilota dał mi okazję do licznych spotkań z wieloma poważnymi ludźmi. Wiele czasu spędziłem z dorosłymi."
+                    + "Zawód pilota dał mi okazję do licznych spotkań z wieloma poważnymi ludźmi. Wiele czasu spędziłem z dorosłymi."
+                    + "Zawód pilota dał mi okazję do licznych spotkań z wieloma poważnymi ludźmi. Wiele czasu spędziłem z dorosłymi."
+                    + "Zawód pilota dał mi okazję do licznych spotkań z wieloma poważnymi ludźmi. Wiele czasu spędziłem z dorosłymi."
+                    + "Zawód pilota dał mi okazję do licznych spotkań z wieloma poważnymi ludźmi. Wiele czasu spędziłem z dorosłymi."
+                    + "Zawód pilota dał mi okazję do licznych spotkań z wieloma poważnymi ludźmi. Wiele czasu spędziłem z dorosłymi."
+                    + "Zawód pilota dał mi okazję do licznych spotkań z wieloma poważnymi ludźmi. Wiele czasu spędziłem z dorosłymi."
+                    + "Zawód pilota dał mi okazję do licznych spotkań z wieloma poważnymi ludźmi. Wiele czasu spędziłem z dorosłymi."
+                    + "Zawód pilota dał mi okazję do licznych spotkań z wieloma poważnymi ludźmi. Wiele czasu spędziłem z dorosłymi."
+                    + "Zawód pilota dał mi okazję do licznych spotkań z wieloma poważnymi ludźmi. Wiele czasu spędziłem z dorosłymi."
+                    + "Zawód pilota dał mi okazję do licznych spotkań z wieloma poważnymi ludźmi. Wiele czasu spędziłem z dorosłymi."
+                    + "Zawód pilota dał mi okazję do licznych spotkań z wieloma poważnymi ludźmi. Wiele czasu spędziłem z dorosłymi."
+                    + "Zawód pilota dał mi okazję do licznych spotkań z wieloma poważnymi ludźmi. Wiele czasu spędziłem z dorosłymi."
+                    + "Zawód pilota dał mi okazję do licznych spotkań z wieloma poważnymi ludźmi. Wiele czasu spędziłem z dorosłymi."
+                    + "Zawód pilota dał mi okazję do licznych spotkań z wieloma poważnymi ludźmi. Wiele czasu spędziłem z dorosłymi."
+                    + "Zawód pilota dał mi okazję do licznych spotkań z wieloma poważnymi ludźmi. Wiele czasu spędziłem z dorosłymi."
+                    + "Zawód pilota dał mi okazję do licznych spotkań z wieloma poważnymi ludźmi. Wiele czasu spędziłem z dorosłymi."
+                    + "Zawód pilota dał mi okazję do licznych spotkań z wieloma poważnymi ludźmi. Wiele czasu spędziłem z dorosłymi."
+                    + "Zawód pilota dał mi okazję do licznych spotkań z wieloma poważnymi ludźmi. Wiele czasu spędziłem z dorosłymi."
+                    + "Zawód pilota dał mi okazję do licznych spotkań z wieloma poważnymi ludźmi. Wiele czasu spędziłem z dorosłymi."
+                    + "Zawód pilota dał mi okazję do licznych spotkań z wieloma poważnymi ludźmi. Wiele czasu spędziłem z dorosłymi."
+                    + "Zawód pilota dał mi okazję do licznych spotkań z wieloma poważnymi ludźmi. Wiele czasu spędziłem z dorosłymi."
+                    + "Zawód pilota dał mi okazję do licznych spotkań z wieloma poważnymi ludźmi. Wiele czasu spędziłem z dorosłymi."
+                    + "Zawód pilota dał mi okazję do licznych spotkań z wieloma poważnymi ludźmi. Wiele czasu spędziłem z dorosłymi."
+                    + "Zawód pilota dał mi okazję do licznych spotkań z wieloma poważnymi ludźmi. Wiele czasu spędziłem z dorosłymi."
+                    + "Zawód pilota dał mi okazję do licznych spotkań z wieloma poważnymi ludźmi. Wiele czasu spędziłem z dorosłymi."
+                    + "Zawód pilota dał mi okazję do licznych spotkań z wieloma poważnymi ludźmi. Wiele czasu spędziłem z dorosłymi."
+                    + "Zawód pilota dał mi okazję do licznych spotkań z wieloma poważnymi ludźmi. Wiele czasu. ";
+                
         TextPrinter tp = new TextPrinter();
   
-        tp.print2Columns(text, 1);
+      //  tp.print2Columns(text, 1);
         
-        tp.print2Columns(text, 10);
+       // tp.print2Columns(text, 10);
         
-        tp.print2Columns(text, 20);
+       // tp.print2Columns(text, 20);
         
         tp.print2Columns(text, 30);
         
-        tp.print2Columns(text, 50);
+       tp.print2Columns(text, 50);
         
-        tp.print2Columns(text, 100);
-
-	}
+     //   tp.print2Columns(text, 100);
+    }
 
 }

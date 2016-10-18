@@ -1,0 +1,7 @@
+#surefire
+#Tue Oct 18 08:39:32 CEST 2016
+maven.ext.class.path=C\:\\Program Files\\NetBeans 8.1\\java\\maven-nblib\\netbeans-eventspy.jar
+user.dir=C\:\\Users\\admin\\Documents\\NetBeansProjects\\TextPrinter
+file.encoding=UTF-8
+localRepository=C\:\\Users\\admin\\.m2\\repository
+basedir=C\:\\Users\\admin\\Documents\\NetBeansProjects\\TextPrinter
