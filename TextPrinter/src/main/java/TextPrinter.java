@@ -33,11 +33,13 @@ public class TextPrinter {
             
             if(textKeeper.charAt(columnWidth)!=' '){
                 
-                if(textKeeper.charAt(columnWidth)=='.'){
+                
+                if(textKeeper.charAt(columnWidth)=='-' || textKeeper.charAt(columnWidth)=='.' || textKeeper.charAt(columnWidth)==','){
                     lines.add(textKeeper.substring(0, columnWidth+1));
                     textKeeper.delete(0, columnWidth+1);
+
                 }
-                else if(textKeeper.charAt(columnWidth+1)=='.'){
+                else if(textKeeper.charAt(columnWidth+1)==','){
                     lines.add(textKeeper.substring(0, columnWidth+2));
                     textKeeper.delete(0, columnWidth+2);
                 }
