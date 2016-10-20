@@ -72,13 +72,13 @@ public class TestPrintText extends TestCase{
         
        // tp.print2Columns(text, 10);
         
-       // tp.print2Columns(text, 20);
+        tp.print2Columns(text, 20);
         
         tp.print2Columns(text, 30);
         
        tp.print2Columns(text, 50);
         
-     //   tp.print2Columns(text, 100);
+        tp.print2Columns(text, 100);
     }
 
 }

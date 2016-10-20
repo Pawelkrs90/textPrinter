@@ -16,8 +16,7 @@ public class TextPrinter {
 
     }
     
-
-    public void print2Columns(String text, int columnWidth){
+    public void print2Columns(String text, final int columnWidth){
         
         lines = new ArrayList<>();
         textKeeper = new StringBuilder();
@@ -29,49 +28,46 @@ public class TextPrinter {
         while(textKeeper.length()>columnWidth){
             
             if(textKeeper.charAt(0)==' ')
-                textKeeper.deleteCharAt(0);
+               textKeeper.deleteCharAt(0);
             
-            if(textKeeper.charAt(columnWidth)!=' '){
+           
+            if(!Character.isWhitespace(textKeeper.charAt(columnWidth))){
                 
-                
-                if(textKeeper.charAt(columnWidth)=='-' || textKeeper.charAt(columnWidth)=='.' || textKeeper.charAt(columnWidth)==','){
-                    lines.add(textKeeper.substring(0, columnWidth+1));
-                    textKeeper.delete(0, columnWidth+1);
-
+                if(textKeeper.charAt(columnWidth)=='.' || 
+                   textKeeper.charAt(columnWidth)==',' ||
+                   textKeeper.charAt(columnWidth)=='?' ||
+                   textKeeper.charAt(columnWidth)=='!' ||
+                   textKeeper.charAt(columnWidth)=='-'){
+                    
+                   lines.add(textKeeper.substring(0, columnWidth+1));
+                   textKeeper.delete(0, columnWidth+1);
                 }
-                else if(textKeeper.charAt(columnWidth+1)==','){
-                    lines.add(textKeeper.substring(0, columnWidth+2));
-                    textKeeper.delete(0, columnWidth+2);
-                }
-                else if(textKeeper.charAt(columnWidth+1)==' '){
-                    lines.add(textKeeper.substring(0, columnWidth+2));
-                    textKeeper.delete(0, columnWidth+2);
-                }
-                else if(textKeeper.charAt(columnWidth-1)==' '){
-                    lines.add(textKeeper.substring(0, columnWidth-1));
-                    textKeeper.delete(0, columnWidth-1);
-                }
-                else if(textKeeper.charAt(columnWidth-1)!=' '&& textKeeper.charAt(columnWidth-2)==' '){
-                    lines.add(textKeeper.substring(0, columnWidth-2));
-                    textKeeper.delete(0, columnWidth-2);
-                }
-
                 else{
-
-                    textKeeper.insert(columnWidth, '-');
-                    lines.add(textKeeper.substring(0, columnWidth+1));
-                    textKeeper.delete(0, columnWidth+1); 
+                    
+                    int index = columnWidth-1;
+            
+                    while(textKeeper.charAt(index)!=' '){
+                       
+                        index--;
+                    }
+                    
+                    lines.add(textKeeper.substring(0, index+1));
+                    textKeeper.delete(0, index+1);
+                    
                 }
-
             }
             else{
                 
                 lines.add(textKeeper.substring(0, columnWidth));
-                textKeeper.delete(0, columnWidth);
-                 
+                textKeeper.delete(0, columnWidth);               
             }
         }
+        
+        //dodaje ostatnią linie
+        if(textKeeper.charAt(0)==' ')
+            textKeeper.deleteCharAt(0);
         lines.add(textKeeper.substring(0, textKeeper.length()));
+        
         
         if(lines.size()%2==0){
                 columnA = lines.subList(0, lines.size()/2);
